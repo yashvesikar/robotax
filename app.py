@@ -28,7 +28,7 @@ def calculations():
                 array_of_employees.append(Employee(employee['averageTax'],\
                                                    employee['wage'],\
                                                    employee['productivity'],\
-                                                   employee['numberOfEmployees']\
+                                                   employee['numberOfEmployees'],\
                                                    False))
 
         if key == 'newEmployees':
@@ -36,19 +36,18 @@ def calculations():
                 array_of_employees.append(Employee(employee['averageTax'],\
                                                    employee['wage'],\
                                                    0,\
-                                                   employee['numberOfEmployees']\
+                                                   employee['numberOfEmployees'],\
                                                    True))
         if key == 'automations':
             for automation in value:
                 array_of_automations.append(Automation(automation['productivity'],\
                                                        automation['cost'],\
-                                                       automation['numberOfAutomations']\
+                                                       automation['numberOfAutomations'],\
                                                        automation['lifeSpan']))
 
 
     #Employee data
     total_tax = sum(emp.Tax()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == False)
-    print(total_tax)
     total_salary = sum(emp.Wage()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == False)
     total_production = sum(emp.Production() for emp in array_of_employees if emp.Status() == False)
 
@@ -57,18 +56,15 @@ def calculations():
 
     #Robot data
     robots_added = len(array_of_automations) #This is incorrect
-    robots_production = sum(automation.Production()*automation.NumberOfAutomation for automation in array_of_automations)
+    robots_production = sum(automation.Production()*automation.NumberOfAutomations() for automation in array_of_automations)
     #Technician data/new employee data
-    technicians_tax = sum(emp.Tax() for emp in array_of_employees if emp.Status() == True)
-    print(technicians_tax)
-    technicians_salary = sum(emp.Wage() for emp in array_of_employees if emp.Status() == True)
+    technicians_tax = sum(emp.Tax()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == True)
+    technicians_salary = sum(emp.Wage()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == True)
 
     robot_tax = (lhs*robots_production) - technicians_tax
 
     oldest_robot = 0
     for robot in array_of_automations:
-        print(robot)
-        print(robot.LifeSpan())
         if robot.LifeSpan() > oldest_robot:
             oldest_robot = robot.LifeSpan()
     robots_cost = sum(robot.Cost() / robot.LifeSpan() for robot in array_of_automations)
