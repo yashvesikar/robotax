@@ -434,24 +434,25 @@ img.tooltip-thumb {
   font-family: 'Baloo', cursive;
   font-size: 5em;
   margin-top: 100px;
+  margin-bottom: 25px;
 }
-/* line 13, ../sass/index.scss */
+/* line 14, ../sass/index.scss */
 #intro-header span {
   color: #303036;
   margin: auto;
 }
 
-/* line 19, ../sass/index.scss */
+/* line 20, ../sass/index.scss */
 #intro-text {
   color: #3498db;
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
   font-weight: 500;
-  margin: 25px auto auto;
+  margin: 0 auto auto;
   width: 85%;
 }
 
-/* line 29, ../sass/index.scss */
+/* line 30, ../sass/index.scss */
 #first-step h3 {
   color: #303036;
   font-family: 'Baloo', cursive;
@@ -460,12 +461,12 @@ img.tooltip-thumb {
   text-align: left;
   width: 85%;
 }
-/* line 37, ../sass/index.scss */
+/* line 38, ../sass/index.scss */
 #first-step h3 span {
   color: #7ac458;
 }
 
-/* line 43, ../sass/index.scss */
+/* line 44, ../sass/index.scss */
 #employee-add {
   background-color: #fff;
   border-radius: 2px;
@@ -476,7 +477,7 @@ img.tooltip-thumb {
   width: 85%;
 }
 
-/* line 53, ../sass/index.scss */
+/* line 54, ../sass/index.scss */
 #step1form,
 #step3form {
   -ms-flex-line-pack: center;
@@ -490,7 +491,7 @@ img.tooltip-thumb {
   padding: 0;
   width: 100%;
 }
-/* line 63, ../sass/index.scss */
+/* line 64, ../sass/index.scss */
 #step1form input,
 #step3form input {
   border: 0;
@@ -498,20 +499,20 @@ img.tooltip-thumb {
   padding: 5px 0 5px 10px;
   width: calc(100%/4);
 }
-/* line 70, ../sass/index.scss */
+/* line 71, ../sass/index.scss */
 #step1form input:first-child,
 #step1form input:nth-child(2),
 #step3form input:first-child,
 #step3form input:nth-child(2) {
   border-right: 1px solid #e2e2e2;
 }
-/* line 75, ../sass/index.scss */
+/* line 76, ../sass/index.scss */
 #step1form input:last-child,
 #step3form input:last-child {
   border-left: 1px solid #e2e2e2;
 }
 
-/* line 80, ../sass/index.scss */
+/* line 81, ../sass/index.scss */
 .add-header {
   -ms-flex-line-pack: center;
       align-content: center;
@@ -532,22 +533,22 @@ img.tooltip-thumb {
   padding: 0;
   width: 100%;
 }
-/* line 93, ../sass/index.scss */
+/* line 94, ../sass/index.scss */
 .add-header li {
   font-size: 16px;
   padding: 8px 0;
   width: calc(100%/4);
 }
-/* line 99, ../sass/index.scss */
+/* line 100, ../sass/index.scss */
 .add-header li:first-child,
 .add-header li:nth-child(2) {
   border-right: 1px solid #e2e2e2;
 }
-/* line 104, ../sass/index.scss */
+/* line 105, ../sass/index.scss */
 .add-header li:last-child {
   border-left: 1px solid #e2e2e2;
 }
-/* line 108, ../sass/index.scss */
+/* line 109, ../sass/index.scss */
 .add-header li a {
   color: #e2e2e2;
   font-size: 12px;
@@ -556,11 +557,11 @@ img.tooltip-thumb {
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 116, ../sass/index.scss */
+/* line 117, ../sass/index.scss */
 .add-header li a:hover {
   opacity: 1;
 }
-/* line 120, ../sass/index.scss */
+/* line 121, ../sass/index.scss */
 .add-header li span {
   border: 0;
   color: #e2e2e2;
@@ -568,7 +569,7 @@ img.tooltip-thumb {
   font-size: 12px;
 }
 
-/* line 130, ../sass/index.scss */
+/* line 131, ../sass/index.scss */
 #second-step h3,
 #third-step h3 {
   color: #303036;
@@ -579,13 +580,13 @@ img.tooltip-thumb {
   text-align: left;
   width: 85%;
 }
-/* line 139, ../sass/index.scss */
+/* line 140, ../sass/index.scss */
 #second-step h3 span,
 #third-step h3 span {
   color: #7ac458;
 }
 
-/* line 145, ../sass/index.scss */
+/* line 146, ../sass/index.scss */
 #step2form {
   -ms-flex-line-pack: center;
       align-content: center;
@@ -598,20 +599,20 @@ img.tooltip-thumb {
   padding: 0;
   width: 100%;
 }
-/* line 154, ../sass/index.scss */
+/* line 155, ../sass/index.scss */
 #step2form input {
   border: 0;
   font-size: 16px;
   padding: 5px 0 5px 10px;
   width: calc(100%/3);
 }
-/* line 161, ../sass/index.scss */
+/* line 162, ../sass/index.scss */
 #step2form input:nth-child(2) {
   border-left: 1px solid #e2e2e2;
   border-right: 1px solid #e2e2e2;
 }
 
-/* line 167, ../sass/index.scss */
+/* line 168, ../sass/index.scss */
 #new-emp-add {
   background-color: #fff;
   border-radius: 2px;
@@ -622,7 +623,7 @@ img.tooltip-thumb {
   position: relative;
   width: 85%;
 }
-/* line 177, ../sass/index.scss */
+/* line 178, ../sass/index.scss */
 #new-emp-add #new-emp-add-header {
   -ms-flex-line-pack: center;
       align-content: center;
@@ -643,18 +644,18 @@ img.tooltip-thumb {
   padding: 0;
   width: 100%;
 }
-/* line 190, ../sass/index.scss */
+/* line 191, ../sass/index.scss */
 #new-emp-add #new-emp-add-header li {
   font-size: 16px;
   padding: 8px 0;
   width: calc(100%/3);
 }
-/* line 196, ../sass/index.scss */
+/* line 197, ../sass/index.scss */
 #new-emp-add #new-emp-add-header li:nth-child(2) {
   border-left: 1px solid #e2e2e2;
   border-right: 1px solid #e2e2e2;
 }
-/* line 201, ../sass/index.scss */
+/* line 202, ../sass/index.scss */
 #new-emp-add #new-emp-add-header li a {
   color: #e2e2e2;
   font-size: 12px;
@@ -663,11 +664,11 @@ img.tooltip-thumb {
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 209, ../sass/index.scss */
+/* line 210, ../sass/index.scss */
 #new-emp-add #new-emp-add-header li a:hover {
   opacity: 1;
 }
-/* line 213, ../sass/index.scss */
+/* line 214, ../sass/index.scss */
 #new-emp-add #new-emp-add-header li span {
   border: 0;
   color: #e2e2e2;
@@ -675,7 +676,7 @@ img.tooltip-thumb {
   font-size: 12px;
 }
 
-/* line 222, ../sass/index.scss */
+/* line 223, ../sass/index.scss */
 #automation-add {
   background-color: #fff;
   border-radius: 2px;
@@ -687,14 +688,14 @@ img.tooltip-thumb {
   width: 85%;
 }
 
-/* line 233, ../sass/index.scss */
+/* line 234, ../sass/index.scss */
 #submit-step {
   display: none;
   margin: 25px auto auto;
   text-align: left;
   width: 85%;
 }
-/* line 239, ../sass/index.scss */
+/* line 240, ../sass/index.scss */
 #submit-step #submit {
   background-color: #7ac458;
   border: 0;
@@ -707,11 +708,11 @@ img.tooltip-thumb {
   width: 150px;
 }
 
-/* line 252, ../sass/index.scss */
+/* line 253, ../sass/index.scss */
 #calculations {
   margin-top: 140px;
 }
-/* line 255, ../sass/index.scss */
+/* line 256, ../sass/index.scss */
 #calculations #calc-auto-tax {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -719,12 +720,12 @@ img.tooltip-thumb {
   text-align: left;
   width: 85%;
 }
-/* line 262, ../sass/index.scss */
+/* line 263, ../sass/index.scss */
 #calculations #calc-auto-tax span {
   color: #7ac458;
   font-weight: bold;
 }
-/* line 268, ../sass/index.scss */
+/* line 269, ../sass/index.scss */
 #calculations #calc-gov-tax {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -732,18 +733,18 @@ img.tooltip-thumb {
   text-align: right;
   width: 85%;
 }
-/* line 275, ../sass/index.scss */
+/* line 276, ../sass/index.scss */
 #calculations #calc-gov-tax span {
   color: #3498db;
   font-weight: bold;
 }
-/* line 281, ../sass/index.scss */
+/* line 282, ../sass/index.scss */
 #calculations #to-be-or-nah {
   color: #3498db;
   font-family: 'Baloo', cursive;
   font-size: 32px;
 }
-/* line 287, ../sass/index.scss */
+/* line 288, ../sass/index.scss */
 #calculations #calc-auto-main {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -751,7 +752,7 @@ img.tooltip-thumb {
   margin: auto;
   width: 85%;
 }
-/* line 294, ../sass/index.scss */
+/* line 295, ../sass/index.scss */
 #calculations #calc-auto-main span {
   color: #7ac458;
   font-weight: bold;

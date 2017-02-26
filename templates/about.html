@@ -27,45 +27,80 @@
 
     <h1 id="intro-header">
       About
-      <span>Us</span>
     </h1>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="{{ url_for('static', filename='javascripts/index.js') }}"></script>
-    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nccryZOcrUg" frameborder="0" allowfullscreen></iframe>
-    <div class="gates"> “If a human does $50,000 worth of work in a factory, that income is taxed.  If a robot comes in to do the same, you’d think we’d tax the robot at a similar level”</div>
-    
-    <h2>Potential Effects of a Tax on Robots </h2>
-    <ul>
-      <li> Slower adoption of automated systems
-      <li> Fewer layoffs from robots taking jobs
-      <li> Government revenue to apply towards paying laborers to perform more personable jobs
-      <li> Government could reinvest money back into business
-    </ul>
-    
-    <img src="{{ url_for('static', filename='images/LossTable.png') }}" alt="Manufacturing job statistics">
-    <img src="{{ url_for('static', filename='images/ManufactureGraph.png') }}" alt="Graph of production and employment">
-    <p>Although production has increased over the years, the number of people employed in manufacturing has been on a constant decline.  
-      Given an average blue collar salary of $31,400 and a corporate income tax of 15%, the lost revenue from income tax was
-      <span> $25,000,000,000 </span> in 2010 given 5.6 million at $4,400 a person each year. </p>
-    
-    <h2>RoboTax</h2>
-    <p>Website to estimate the required yearly tax on an automated system in order to ensure 
-      that government income tax does not drop when a company changes to an automated system
+
+    <div id="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nccryZOcrUg" frameborder="0" allowfullscreen></iframe>
+      <div id="gates-wrapper">
+        <div id="quote">
+          “If a human does $50,000 worth of work in a factory, that income is taxed. If a robot comes in to do the same, you’d think we’d tax the robot at a similar level”
+        </div>
+        <div id="gates">- Bill Gates</div>
+      </div>
+    </div>
+
+    <div id="stats-wrap">
+      <p>Although production has increased over the years, the number of people employed in manufacturing has been on a constant decline. Given an average blue collar salary of
+        <span>$31,400</span>
+        and a corporate income tax of
+        <span id="percent">15%</span>, the lost revenue from income tax was
+        <span>
+          $25,000,000,000
+        </span>
+        in 2010 given
+        <span>5.6 million at $4,400</span>
+        per person each year.
+      </p>
+      <div id="img-wrap">
+        <img src="{{ url_for('static', filename='images/LossTable.png') }}" alt="Manufacturing job statistics">
+        <img src="{{ url_for('static', filename='images/ManufactureGraph.png') }}" alt="Graph of production and employment">
+      </div>
+    </div>
+    <h2 id="robo">RoboTax</h2>
+    <p id="eq-text-above">RoboTax estimates a required yearly tax on an automated system given information on replaced employees. The estimation is designed to raise tax revenue and compensate for lower income tax as robots and algorithms replace workers.
     </p>
-<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_jvn&space;\frac{\sum&space;T_{O}}{\sum&space;P_{O}}&space;=&space;\frac{\sum&space;T_{A}&space;&plus;&space;\sum&space;T_{N}}{\sum&space;P_{A}}" target="_blank"><img src="https://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{\sum&space;T_{O}}{\sum&space;P_{O}}&space;=&space;\frac{\sum&space;T_{A}&space;&plus;&space;\sum&space;T_{N}}{\sum&space;P_{A}}" title="\frac{\sum T_{O}}{\sum P_{O}} = \frac{\sum T_{A} + \sum T_{N}}{\sum P_{A}}" /></a>    <p> 
-    <p>Old employee yearly taxes divided by productivity is equal to taxes on Automation and New hires divided by productivity of the Automation</p>
-    
-    <ul>
-      <li> Government can determine potential for tax revenue
-      <li> Businesses can calculate how much they would have to spend in taxes
-      <li> Businesses may use to assist in making investment decisions (automate or pay for labor)
-      <li> Legal and Finance sectors can make more informed decisions on future investments and liabilities
-    </ul>
-    
-    
-    
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\fn_jvn&space;\frac{\sum&space;T_{O}}{\sum&space;P_{O}}&space;=&space;\frac{\sum&space;T_{A}&space;&plus;&space;\sum&space;T_{N}}{\sum&space;P_{A}}" target="_blank"><img
+      src="https://latex.codecogs.com/png.latex?\fn_jvn&space;\frac{\sum&space;T_{O}}{\sum&space;P_{O}}&space;=&space;\frac{\sum&space;T_{A}&space;&plus;&space;\sum&space;T_{N}}{\sum&space;P_{A}}"
+      title="\frac{\sum T_{O}}{\sum P_{O}} = \frac{\sum T_{A} + \sum T_{N}}{\sum P_{A}}"/></a>
+    <p id="eq-text-below">Old employee yearly taxes divided by productivity is equal to taxes on automation and new hires divided by productivity of the automation.</p>
+
+    <h2 id="potential">Potential Effects of a Tax on Robots
+    </h2>
+
+    <div id="list-wrap">
+      <ul>
+        <li>
+          Slower adoption of automated systems.
+        </li>
+        <li>
+          Fewer layoffs from robots taking jobs.
+        </li>
+        <li>
+          Government revenue increase applies towards paying laborers to perform more personable jobs.
+        </li>
+        <li>
+          Government could reinvest money back into business.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Government can determine potential for tax revenue.
+        </li>
+        <li>
+          Businesses can calculate how much they would have to spend in taxes.
+        </li>
+        <li>
+          Businesses may use to assist in making investment decisions (automate or pay for labor).
+        </li>
+        <li>
+          Legal and Finance sectors can make more informed decisions on future investments and liabilities.
+        </li>
+      </ul>
+    </div>
+
   </body>
 
 </html>
