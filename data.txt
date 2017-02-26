@@ -1,13 +1,1 @@
-[
-
-[{"name":"numberOfEmployees","value":"1"},
-{"name":"averageTax","value":"600"},
-{"name":"wage","value":"6031"},
-{"name":"productivity","value":"24"}]','
-
-[{"name":"numberOfEmployees","value":"234"},
-{"name":"averageTax","value":"243"},
-{"name":"wage","value":"343"},
-{"name":"productivity","value":"5235"}]
-
-]
+{"oldEmployees":[{"numberOfEmployees":"1","averageTax":"2","wage":"3","productivity":"4"},{"numberOfEmployees":"1","averageTax":"2","wage":"3","productivity":"44"},{}],"newEmployees":[{"numberOfEmployees":"3","averageTax":"5","wage":"7"},{}],"automations":[{"numberOfAutomations":"89","cost":"57","productivity":"8"},{}]}
