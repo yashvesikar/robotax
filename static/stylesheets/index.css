@@ -464,7 +464,7 @@ nav li span span {
   border-radius: 2px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
   margin: 15px auto auto;
-  min-height: 100px;
+  min-height: 93px;
   position: relative;
   width: 85%;
 }
@@ -484,21 +484,21 @@ nav li span span {
 /* line 203, ../sass/index.scss */
 #employee-add form input {
   border: 0;
+  font-size: 16px;
   padding: 5px 0 5px 10px;
   width: calc(100%/4);
 }
-/* line 209, ../sass/index.scss */
+/* line 210, ../sass/index.scss */
 #employee-add form input:first-child,
 #employee-add form input:nth-child(2) {
   border-right: 1px solid #e2e2e2;
 }
-/* line 214, ../sass/index.scss */
+/* line 215, ../sass/index.scss */
 #employee-add form input:last-child {
   border-left: 1px solid #e2e2e2;
 }
-
 /* line 220, ../sass/index.scss */
-.add-header {
+#employee-add #emp-add-header {
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: #303036;
@@ -519,22 +519,22 @@ nav li span span {
   width: 100%;
 }
 /* line 233, ../sass/index.scss */
-.add-header li {
+#employee-add #emp-add-header li {
   font-size: 16px;
   padding: 8px 0;
   width: calc(100%/4);
 }
 /* line 239, ../sass/index.scss */
-.add-header li:first-child,
-.add-header li:nth-child(2) {
+#employee-add #emp-add-header li:first-child,
+#employee-add #emp-add-header li:nth-child(2) {
   border-right: 1px solid #e2e2e2;
 }
 /* line 244, ../sass/index.scss */
-.add-header li:last-child {
+#employee-add #emp-add-header li:last-child {
   border-left: 1px solid #e2e2e2;
 }
 /* line 248, ../sass/index.scss */
-.add-header li a {
+#employee-add #emp-add-header li a {
   color: #e2e2e2;
   font-size: 12px;
   opacity: 0.7;
@@ -543,19 +543,20 @@ nav li span span {
   transition: all 0.1s linear;
 }
 /* line 256, ../sass/index.scss */
-.add-header li a:hover {
+#employee-add #emp-add-header li a:hover {
   opacity: 1;
 }
 /* line 260, ../sass/index.scss */
-.add-header li span {
+#employee-add #emp-add-header li span {
   border: 0;
   color: #e2e2e2;
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
 }
 
-/* line 269, ../sass/index.scss */
-#second-step h3 {
+/* line 271, ../sass/index.scss */
+#second-step h3,
+#third-step h3 {
   color: #303036;
   display: none;
   font-family: 'Baloo', cursive;
@@ -564,24 +565,14 @@ nav li span span {
   text-align: left;
   width: 85%;
 }
-/* line 278, ../sass/index.scss */
-#second-step h3 span {
+/* line 280, ../sass/index.scss */
+#second-step h3 span,
+#third-step h3 span {
   color: #7ac458;
 }
 
-/* line 284, ../sass/index.scss */
-#new-emp-add {
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
-  display: none;
-  margin: 15px auto auto;
-  min-height: 100px;
-  position: relative;
-  width: 85%;
-}
-/* line 294, ../sass/index.scss */
-#new-emp-add #emp-add-header {
+/* line 286, ../sass/index.scss */
+.add-header {
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: #303036;
@@ -601,19 +592,19 @@ nav li span span {
   padding: 0;
   width: 100%;
 }
-/* line 307, ../sass/index.scss */
-#new-emp-add #emp-add-header li {
+/* line 299, ../sass/index.scss */
+.add-header li {
   font-size: 16px;
   padding: 8px 0;
   width: calc(100%/3);
 }
-/* line 313, ../sass/index.scss */
-#new-emp-add #emp-add-header li:nth-child(2) {
+/* line 305, ../sass/index.scss */
+.add-header li:nth-child(2) {
   border-left: 1px solid #e2e2e2;
   border-right: 1px solid #e2e2e2;
 }
-/* line 318, ../sass/index.scss */
-#new-emp-add #emp-add-header li a {
+/* line 310, ../sass/index.scss */
+.add-header li a {
   color: #e2e2e2;
   font-size: 12px;
   opacity: 0.7;
@@ -621,19 +612,21 @@ nav li span span {
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 326, ../sass/index.scss */
-#new-emp-add #emp-add-header li a:hover {
+/* line 318, ../sass/index.scss */
+.add-header li a:hover {
   opacity: 1;
 }
-/* line 330, ../sass/index.scss */
-#new-emp-add #emp-add-header li span {
+/* line 322, ../sass/index.scss */
+.add-header li span {
   border: 0;
   color: #e2e2e2;
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
 }
-/* line 338, ../sass/index.scss */
-#new-emp-add form {
+
+/* line 330, ../sass/index.scss */
+#step2form,
+#step3form {
   -ms-flex-line-pack: center;
       align-content: center;
   border-bottom: 1px solid #e2e2e2;
@@ -645,14 +638,61 @@ nav li span span {
   padding: 0;
   width: 100%;
 }
-/* line 347, ../sass/index.scss */
-#new-emp-add form input {
+/* line 340, ../sass/index.scss */
+#step2form input,
+#step3form input {
   border: 0;
+  font-size: 16px;
   padding: 5px 0 5px 10px;
   width: calc(100%/3);
 }
-/* line 353, ../sass/index.scss */
-#new-emp-add form input:nth-child(2) {
+/* line 347, ../sass/index.scss */
+#step2form input:nth-child(2),
+#step3form input:nth-child(2) {
   border-left: 1px solid #e2e2e2;
   border-right: 1px solid #e2e2e2;
+}
+
+/* line 353, ../sass/index.scss */
+#new-emp-add {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  display: none;
+  margin: 15px auto auto;
+  min-height: 93px;
+  position: relative;
+  width: 85%;
+}
+
+/* line 364, ../sass/index.scss */
+#automation-add {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  display: none;
+  margin: 15px auto auto;
+  min-height: 93px;
+  position: relative;
+  width: 85%;
+}
+
+/* line 375, ../sass/index.scss */
+#submit-step {
+  display: none;
+  margin: 25px auto auto;
+  text-align: left;
+  width: 85%;
+}
+/* line 381, ../sass/index.scss */
+#submit-step #submit {
+  background-color: #7ac458;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.0em;
+  height: 50px;
+  width: 150px;
 }

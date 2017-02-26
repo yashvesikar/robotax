@@ -36,11 +36,11 @@
     <section id="first-step">
       <h3>
         <span>1.</span>
-        Replaced Employees
+        Employees to be Replaced
       </h3>
 
       <div id="employee-add">
-        <ul class="add-header">
+        <ul id="emp-add-header">
           <li># of Employees</li>
           <li>Average Tax
             <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
@@ -68,7 +68,7 @@
       </h3>
 
       <div id="new-emp-add">
-        <ul id="emp-add-header">
+        <ul class="add-header">
           <li># of Employees</li>
           <li>Average Tax
             <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
@@ -79,10 +79,38 @@
             </a>
           </li>
         </ul>
-        <form>
+        <form id="step2form">
           <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Wage" required>
         </form>
       </div>
+    </section>
+
+    <section id="third-step">
+      <h3>
+        <span>3.</span>
+        Automations
+      </h3>
+
+      <div id="automation-add">
+        <ul class="add-header">
+          <li># of Automations</li>
+          <li>Cost
+            <a class="tooltip-target" href="#cost-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+          <li>Productivity
+            <a class="tooltip-target" href="#prod-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+        </ul>
+        <form id="step3form">
+          <input type="text" name="numberOfAutomations" id="num-auto" class="" placeholder="# Automations" required><input type="text" name="cost" id="cost" class="" placeholder="Cost" required><input type="text" name="productivity" id="productivity" class="" placeholder="Productivity" required>
+        </form>
+      </div>
+    </section>
+
+    <section id="submit-step">
+      <button id="submit">Calculate</button>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
