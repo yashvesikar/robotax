@@ -17,7 +17,7 @@ def main():
 def calculations():
 
     data = ast.literal_eval(request.form.to_dict().keys()[0])
-
+    print(data)
     array_of_employees = []
     array_of_automations = []
 
@@ -28,6 +28,7 @@ def calculations():
                 array_of_employees.append(Employee(employee['averageTax'],\
                                                    employee['wage'],\
                                                    employee['productivity'],\
+                                                   employee['numberOfEmployees']\
                                                    False))
 
         if key == 'newEmployees':
@@ -35,34 +36,51 @@ def calculations():
                 array_of_employees.append(Employee(employee['averageTax'],\
                                                    employee['wage'],\
                                                    0,\
+                                                   employee['numberOfEmployees']\
                                                    True))
         if key == 'automations':
             for automation in value:
                 array_of_automations.append(Automation(automation['productivity'],\
-                                                       automation['cost']))
-
+                                                       automation['cost'],\
+                                                       automation['numberOfAutomations']\
+                                                       automation['lifeSpan']))
 
 
     #Employee data
-    total_tax = sum(emp.Tax() for emp in array_of_employees if emp.Status() == False)
+    total_tax = sum(emp.Tax()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == False)
+    print(total_tax)
+    total_salary = sum(emp.Wage()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == False)
     total_production = sum(emp.Production() for emp in array_of_employees if emp.Status() == False)
 
     #Left hand side of equation, employee side
     lhs = (total_tax) / total_production
 
     #Robot data
-    robots_added = len(array_of_automations)
-    robots_production = sum(automation.Production() for automation in array_of_automations)
+    robots_added = len(array_of_automations) #This is incorrect
+    robots_production = sum(automation.Production()*automation.NumberOfAutomation for automation in array_of_automations)
     #Technician data/new employee data
     technicians_tax = sum(emp.Tax() for emp in array_of_employees if emp.Status() == True)
-
+    print(technicians_tax)
+    technicians_salary = sum(emp.Wage() for emp in array_of_employees if emp.Status() == True)
 
     robot_tax = (lhs*robots_production) - technicians_tax
 
-    increase = robot_tax - total_tax;
+    oldest_robot = 0
+    for robot in array_of_automations:
+        print(robot)
+        print(robot.LifeSpan())
+        if robot.LifeSpan() > oldest_robot:
+            oldest_robot = robot.LifeSpan()
+    robots_cost = sum(robot.Cost() / robot.LifeSpan() for robot in array_of_automations)
+    robots_cost += robot_tax
+    robots_cost += technicians_tax + technicians_salary
 
-    return str([robot_tax, increase])
 
+    return str([robot_tax, robot_tax-total_tax, robots_cost*oldest_robot, total_salary*oldest_robot, oldest_robot])
+    # read the posted values from the UI
+    # _name = request.form['inputName']
+    # _email = request.form['inputEmail']
+    # _password = request.form['inputPassword']
 
 @app.route('/about',methods=['GET'])
 def about():
