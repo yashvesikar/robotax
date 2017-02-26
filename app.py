@@ -6,31 +6,28 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    array_of_employees = []
-    array_of_automations = []
-
-    employeeDummy = {'Employee1': [30000,100],
-                     'Employee2':[30000,100],
-                     'Employee3':[30000,100],
-                     'Employee4':[30000,100],
-                     'Employee5':[30000,100],
-                     'Employee6':[30000,100]
-    }
-
-    automationDummy = {'Automotan1' :(150)}
 
     tax_rate = 0.1
 
-    #Populate array_of_employees
-    for key,val in employeeDummy.items():
-        array_of_employees.append(Employee(val[0],val[1]))
-    #Populate array_of_automations
-    for key,val in automationDummy.items():
-        array_of_employees.append(Automation(val[0]))
-################################################################################
-    for emp in array_of_employees:
-        print(Employee.salary)
-    
+    #Employee data
+    total_salary = sum(emp.Salary() for emp in array_of_employees if emp.Status() == False)
+    total_production = sum(emp.Production() for emp in array_of_employees if emp.Status() == False)
+
+    #Left hand side of equation, employee side
+    lhs = (total_salary * tax_rate) / total_production
+
+    #Robot data
+    robots_added = len(array_of_automations)
+    robots_production = sum(automation.Production() for automation in array_of_automations)
+    #Technician data/new employee data
+    technicians_tax = sum(emp.Salary() for emp in array_of_employees if emp.Status() == True)* tax_rate
+
+
+    robot_tax = (lhs*robots_production) - technicians_tax
+
+    print("Robot Tax: ", robot_tax)
+
+    print("Per robot tax: ", robot_tax/robots_added)
 
     return render_template('index.html')
 
