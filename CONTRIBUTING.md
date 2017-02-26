@@ -1,7 +1,5 @@
-# RoboTax
 
-
-#Contibuting to RoboTax
+# Contibuting to RoboTax
 
 ## Welcome!
 We are looking forward to people exploring the field of this application, we hope it is able to evolve into a modular piece of software that has the ability to analyze multiple sectors. There are many forms of automation in the economy that replaces humans including many softwares tools and robots.  
