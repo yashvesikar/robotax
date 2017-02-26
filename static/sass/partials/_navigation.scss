@@ -1,0 +1,148 @@
+input::-webkit-input-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus:-moz-placeholder {
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus::-moz-placeholder {
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+}
+
+body {
+  background-color: $platinum;
+  margin: 70px auto 0;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+nav {
+  background-color: $jet;
+  display: flex;
+  font-family: ubuntu;
+  font-weight: 300;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  ul {
+    align-content: center;
+    display: inherit;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li:nth-child(2):hover {
+    color: $bleudefrance;
+  }
+
+  li {
+    float: left;
+    line-height: 70px;
+    color: $platinum;
+    transition: all 0.2s linear;
+
+    a {
+      color: inherit;
+      padding: 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a::after {
+      opacity: 0;
+      width: 100%;
+    }
+
+    &#home {
+      align-content: center;
+      display: inherit;
+      flex-direction: row;
+      height: 70px;
+      margin: 0 16px 0 17px;
+      overflow: hidden;
+      position: relative;
+      transition: width 1s ease-in-out;
+      width: 100%;
+    }
+
+    &#home:hover {
+      width: 56px;
+    }
+
+    img {
+      height: auto;
+      opacity: 1;
+      margin: auto;
+      width: 50px;
+    }
+  }
+
+  li &#home,
+  li a::after {
+    background-color: transparent;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: opacity 0.1s linear;
+    width: 100%;
+  }
+
+  li &#home:hover,
+  li a:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  li span {
+    color: $bleudefrance;
+    font-family: 'Baloo', cursive;
+    font-size: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: auto auto auto 16px;
+
+    span {
+      color: $platinum;
+      margin: auto;
+    }
+  }
+}

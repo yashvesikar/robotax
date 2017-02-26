@@ -8,15 +8,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-
     tax_rate = 0.1
-
-
     return render_template('index.html')
+
+
 
 @app.route('/calculations',methods=['POST'])
 def calculations():
-    
+
     data = ast.literal_eval(request.form.to_dict().keys()[0])
 
     array_of_employees = []
@@ -60,11 +59,14 @@ def calculations():
 
     robot_tax = (lhs*robots_production) - technicians_tax
 
-    return render_template('index.html')
-    # read the posted values from the UI
-    # _name = request.form['inputName']
-    # _email = request.form['inputEmail']
-    # _password = request.form['inputPassword']
+    increase = robot_tax - total_tax;
+
+    return str([robot_tax, increase])
+
+
+@app.route('/about',methods=['GET'])
+def about():
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run()

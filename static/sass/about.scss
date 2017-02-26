@@ -1,0 +1,26 @@
+@import 'partials/colors';
+@import url("https://fonts.googleapis.com/css?family=Baloo|Raleway");
+@import 'partials/navigation';
+@import 'partials/tooltip';
+@import 'partials/animations';
+
+#intro-header {
+  color: $bleudefrance;
+  font-family: 'Baloo', cursive;
+  font-size: 5em;
+  margin-top: 100px;
+
+  span {
+    color: $jet;
+    margin: auto;
+  }
+}
+
+#intro-text {
+  color: $bleudefrance;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 25px auto auto;
+  width: 85%;
+}

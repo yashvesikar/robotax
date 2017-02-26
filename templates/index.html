@@ -19,9 +19,9 @@
           <span>Robo<span>Tax</span>
           </span>
         </li>
-        <!-- <li>
-          <a href="https://github.com/">Github</a>
-        </li> -->
+        <li>
+          <a href="/about">About</a>
+        </li>
       </ul>
     </nav>
 
@@ -29,8 +29,7 @@
       Robo<span>Tax</span>
     </h1>
 
-    <p id="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit urna, condimentum vel condimentum non, accumsan nec arcu. Nullam sollicitudin eros nisi, et ultricies justo tincidunt ut. Maecenas eget eros vitae nisi commodo
-      convallis. Mauris quis velit vehicula, luctus turpis vitae, dapibus metus.
+    <p id="intro-text">Fill in the fields below to calculate the required yearly tax on an automated system in order to ensure that the government income tax does not drop when a company changes to an automated system.
     </p>
 
     <section id="first-step">
@@ -40,23 +39,23 @@
       </h3>
 
       <div id="employee-add">
-        <ul id="emp-add-header">
+        <ul class="add-header">
           <li># of Employees</li>
           <li>Average Tax
-            <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
+            <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Tax cost per employee per year.</span>
             </a>
           </li>
-          <li>Wage
-            <a class="tooltip-target" href="#wage-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+          <li>Salary
+            <a class="tooltip-target" href="#wage-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">The amount the employee makes annually.</span>
             </a>
           </li>
           <li>Productivity
-            <a class="tooltip-target" href="#prod-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+            <a class="tooltip-target" href="#prod-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Units produced per day.</span>
             </a>
           </li>
         </ul>
-        <form>
-          <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Wage" required><input type="text" name="productivity" id="num-emp" class="" placeholder="Productivity" required>
+        <form id="step1form">
+          <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Salary" required><input type="text" name="productivity" id="num-emp" class="" placeholder="Productivity" required>
         </form>
       </div>
     </section>
@@ -68,19 +67,19 @@
       </h3>
 
       <div id="new-emp-add">
-        <ul class="add-header">
+        <ul id="new-emp-add-header">
           <li># of Employees</li>
           <li>Average Tax
-            <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
+            <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Tax cost per employee per year.</span>
             </a>
           </li>
-          <li>Wage
-            <a class="tooltip-target" href="#wage-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+          <li>Salary
+            <a class="tooltip-target" href="#wage-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">The amount the employee makes annually.</span>
             </a>
           </li>
         </ul>
         <form id="step2form">
-          <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Wage" required>
+          <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Salary" required>
         </form>
       </div>
     </section>
@@ -95,16 +94,20 @@
         <ul class="add-header">
           <li># of Automations</li>
           <li>Cost
-            <a class="tooltip-target" href="#cost-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
+            <a class="tooltip-target" href="#cost-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Initial cost of the machine.</span>
             </a>
           </li>
           <li>Productivity
-            <a class="tooltip-target" href="#prod-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+            <a class="tooltip-target" href="#prod-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Units produced per day.</span>
+            </a>
+          </li>
+          <li>Life Span
+            <a class="tooltip-target" href="#life-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Life Expectancy of Automation.</span>
             </a>
           </li>
         </ul>
         <form id="step3form">
-          <input type="text" name="numberOfAutomations" id="num-auto" class="" placeholder="# Automations" required><input type="text" name="cost" id="cost" class="" placeholder="Cost" required><input type="text" name="productivity" id="productivity" class="" placeholder="Productivity" required>
+          <input type="text" name="numberOfAutomations" id="num-auto" class="" placeholder="# Automations" required><input type="text" name="cost" id="cost" class="" placeholder="Cost" required><input type="text" name="productivity" id="productivity" class="" placeholder="Productivity" required><input type="text" name="lifeSpan" id="lifeSpan" class="" placeholder="Life Span" required>
         </form>
       </div>
     </section>
