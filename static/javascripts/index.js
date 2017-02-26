@@ -85,56 +85,45 @@ $("#submit").click(function(e) {
   }
 
   $.each($('#employee-add form'), function(index, value) {
-      var data = $(value).serializeArray();
-      emp = {}
-      $.each(data, function(index, objValue) {
-          if ($(objValue['value'].length > 0) {
-              emp[objValue['name']] = objValue['value'];
-            }
-          }); submitData['oldEmployees'].push(emp);
+    var data = $(value).serializeArray();
+    emp = {}
+    $.each(data, function(index, objValue) {
+      if ($(objValue['value']).length > 0) {
+        emp[objValue['name']] = objValue['value'];
+      }
+    });
+    submitData['oldEmployees'].push(emp);
 
-      });
+  });
 
-    $.each($('#new-emp-add form'), function(index, value) {
-        var data = $(value).serializeArray();
-        emp = {}
-        $.each(data, function(index, objValue) {
-            if ($(objValue['value'].length > 0) {
-                emp[objValue['name']] = objValue['value'];
-              }
-            }) submitData['newEmployees'].push(emp);
-        })
+  $.each($('#new-emp-add form'), function(index, value) {
+    var data = $(value).serializeArray();
+    emp = {}
+    $.each(data, function(index, objValue) {
+      if ($(objValue['value']).length > 0) {
+        emp[objValue['name']] = objValue['value'];
+      }
+    });
+    submitData['newEmployees'].push(emp);
+  })
 
-      $.each($('#automation-add form'), function(index, value) {
-          var data = $(value).serializeArray();
-          emp = {}
-          $.each(data, function(index, objValue) {
-              if ($(objValue['value'].length > 0) {
-                  emp[objValue['name']] = objValue['value'];
-                }
-              }) submitData['automations'].push(emp);
-          })
+  $.each($('#automation-add form'), function(index, value) {
+    var data = $(value).serializeArray();
+    emp = {}
+    $.each(data, function(index, objValue) {
+      if ($(objValue['value']).length > 0) {
+        emp[objValue['name']] = objValue['value'];
+      }
+    });
+    submitData['automations'].push(emp);
+  })
 
-        $.ajax({
-          url: '/calculations',
-          data: submitData,
-          dataType: 'json',
-          type: 'POST',
-          success: function(response) {
-            console.log(response);
-          },
-          error: function(error) {
-            console.log(error);
-          }
-        });
-
-        console.log(submitData);
-
-
-        return false;
-      });
-
-    function(response) {
+  $.ajax({
+    url: '/calculations',
+    data: submitData,
+    dataType: 'json',
+    type: 'POST',
+    success: function(response) {
       console.log(response);
     },
     error: function(error) {
@@ -142,22 +131,8 @@ $("#submit").click(function(e) {
     }
   });
 
-console.log(submitData);
+  console.log(submitData);
 
 
-return false;
-});;
-
-function(response) {
-  console.log(response);
-},
-error: function(error) {
-console.log(error);
-}
-});
-
-console.log(submitData);
-
-
-return false;
+  return false;
 });
