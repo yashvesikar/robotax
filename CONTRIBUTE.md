@@ -29,8 +29,6 @@ _Any guidelines for proposing the feature_
 
 ## Code of Conduct
 * Behave
-## Recognition model
-_How will contributors be recognized?_
 
 ## Where can I ask for help?
 
