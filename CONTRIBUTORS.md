@@ -6,4 +6,4 @@ Olivia Miller: MS Paint Pro/Font consensuar/Python Pro
 
 Nate Kurt: Sarcastic, Great at finding free stuff.
 
-## Shoutout to Fulcrum for helping out in everything
+## Shoutout to Fulcrum for helping out with ideas and direction to go with Idea
