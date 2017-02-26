@@ -88,7 +88,7 @@ $("#submit").click(function(e) {
     var data = $(value).serializeArray();
     emp = {}
     $.each(data, function(index, objValue) {
-      if ($(objValue['value']).length > 0) {
+      if (objValue['value'].length > 0) {
         emp[objValue['name']] = objValue['value'];
       }
     });
@@ -100,10 +100,11 @@ $("#submit").click(function(e) {
     var data = $(value).serializeArray();
     emp = {}
     $.each(data, function(index, objValue) {
-      if ($(objValue['value']).length > 0) {
+      if (objValue['value'].length > 0) {
         emp[objValue['name']] = objValue['value'];
       }
     });
+    console.log(emp);
     submitData['newEmployees'].push(emp);
   })
 
@@ -111,7 +112,7 @@ $("#submit").click(function(e) {
     var data = $(value).serializeArray();
     emp = {}
     $.each(data, function(index, objValue) {
-      if ($(objValue['value']).length > 0) {
+      if (objValue['value'].length > 0) {
         emp[objValue['name']] = objValue['value'];
       }
     });
