@@ -6,9 +6,32 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    employee = Employee('salary', 12000.00, 0.00, 25.00, 1000.00, 15000.00)
-    employee = Employee('hourly', 12.00, 550, 25.00, 1000.00, 15000.00)
-    employee = Automation(600, 50.00, .005, 15000.00)
+    array_of_employees = []
+    array_of_automations = []
+
+    employeeDummy = {'Employee1': [30000,100],
+                     'Employee2':[30000,100],
+                     'Employee3':[30000,100],
+                     'Employee4':[30000,100],
+                     'Employee5':[30000,100],
+                     'Employee6':[30000,100]
+    }
+
+    automationDummy = {'Automotan1' :(150)}
+
+    tax_rate = 0.1
+
+    #Populate array_of_employees
+    for key,val in employeeDummy.items():
+        array_of_employees.append(Employee(val[0],val[1]))
+    #Populate array_of_automations
+    for key,val in automationDummy.items():
+        array_of_employees.append(Automation(val[0]))
+################################################################################
+    for emp in array_of_employees:
+        print(Employee.salary)
+    
+
     return render_template('index.html')
 
 #@app.route('/',methods=['POST'])
