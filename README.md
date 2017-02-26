@@ -9,7 +9,9 @@ Our Proof-of-Concept has been tailored to address the issue of loss of manufactu
   * We see this being utilized by the United States government in order to review proposed laws and regulations
   * We see this being used by corporations in order to more effectively relocate their manufacturing assets based on the expansive tax code 
   * we see this being used by the financial and legal sector in order to more effectively advise their clients (government and private interests)
+  
 ## BUILD/INSTALLATION INSTRUCTIONS
+
 ### Installation (Mac OS X)
 
 ##### Install homebrew
