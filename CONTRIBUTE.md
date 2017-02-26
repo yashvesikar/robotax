@@ -18,17 +18,19 @@ _What people might expect in a response from the core devs_
 
 ## How to report a bug: 
 * Templates: 
-  * _What to include in a bug report_
+  * 
 * First bugs for Contributors
-  * _What would be good bugs to start with?_
-    
+  * Unsure where to start off? We are looking into improving, testing and creating some of the following features:
+    * Adding more attributes to create more diverse employee and automation classes
+    * Adding features to the algorithm used to solve for the 'Robot Tax' to make a more accurate model of different business sectors 
 ## New Feature Requirements
 _Any guidelines for proposing the feature_
 
 ## Style Guide / Coding conventions 
 
 ## Code of Conduct
-* Behave
+This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+By participating, you are expected to uphold this code.
 
 ## Where can I ask for help?
 
