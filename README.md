@@ -18,7 +18,7 @@ Our Proof-of-Concept has been tailored to address the issue of loss of manufactu
 ## OTHER SOURCES OF DOCUMENTATION
 
 ## Contributor Guide
-If you would like to contribute to this nifty project, go [here](https://github.com/yashvesikar/robotax/blob/master/CONTRIBUTE.md)
+If you would like to contribute to this nifty project, go [here](https://github.com/yashvesikar/robotax/blob/master/CONTRIBUTING.md)
 
 ## License 
 MIT 
