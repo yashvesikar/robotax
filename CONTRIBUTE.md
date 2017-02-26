@@ -21,7 +21,8 @@ _What people might expect in a response from the core devs_
   * 
 * First bugs for Contributors
   * Unsure where to start off? We are looking into improving, testing and creating some of the following features:
-    * Adding more attributes to create more diverse employee and automation classes
+    
+    * Adding more attributes to create more diverse employee and automation classes
     * Adding features to the algorithm used to solve for the 'Robot Tax' to make a more accurate model of different business sectors 
 ## New Feature Requirements
 New features must demonstrate a clear advantage and contribute the accuracy of our models while still maintaing user simplicity
