@@ -20,16 +20,16 @@ class Employee(object):
         self.status = status
 
     def Wage(self):
-        return self.wage
-        
+        return int(self.wage)
+
     def Tax(self):
-        return self.tax
+        return int(self.tax)
 
     def Production(self):
-        return self.productivity
+        return int(self.productivity)
 
     def Status(self):
         return self.status
 
-    def __str__(self):
-        return "Employee salary: {} , Employee Productivity: {}".format(self.salary,self.productivity)
+    # def __str__(self):
+    #     return "Employee salary: {} , Employee Productivity: {}".format(self.salary,self.productivity)
