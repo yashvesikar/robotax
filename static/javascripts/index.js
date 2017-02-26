@@ -124,7 +124,18 @@ $("#submit").click(function(e) {
     dataType: 'json',
     type: 'POST',
     success: function(response) {
-      console.log(response);
+      // $("#calculations").fadeOut('fast', function() {
+      $("#calculations").html('');
+      $("#calculations").append("<div id='calc-auto-tax'>You can expect to see an automation tax of <span>$" + response[0] + " per year.</span></div><div id='calc-gov-tax'>Additionally, the government \
+          receives a tax revenue increase of <span>$" + response[1] + " per year</span> </div><h2 id='to-be-or-nah'> To Automate or Not to Automate?\
+          </h2><div id='calc-auto-main'>The cost of automation plus maintenance for your robot's " + response[4] + " year life span is about <span>$" + response[2] + "</span> You can expect a cost \
+          of <span>$" + response[3] + "</span> for keeping your labor force for that same about of time. This \
+          does not include additional expenses related to having human workers.</div>")
+      $("html, body").animate({
+        scrollTop: $(document).height()
+      }, 700);
+      $("calculations").fadeIn('slow');
+      // });
     },
     error: function(error) {
       console.log(error);

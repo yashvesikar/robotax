@@ -706,3 +706,53 @@ img.tooltip-thumb {
   height: 50px;
   width: 150px;
 }
+
+/* line 252, ../sass/index.scss */
+#calculations {
+  margin-top: 140px;
+}
+/* line 255, ../sass/index.scss */
+#calculations #calc-auto-tax {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin: auto;
+  text-align: left;
+  width: 85%;
+}
+/* line 262, ../sass/index.scss */
+#calculations #calc-auto-tax span {
+  color: #7ac458;
+  font-weight: bold;
+}
+/* line 268, ../sass/index.scss */
+#calculations #calc-gov-tax {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin: 35px auto 50px;
+  text-align: right;
+  width: 85%;
+}
+/* line 275, ../sass/index.scss */
+#calculations #calc-gov-tax span {
+  color: #3498db;
+  font-weight: bold;
+}
+/* line 281, ../sass/index.scss */
+#calculations #to-be-or-nah {
+  color: #3498db;
+  font-family: 'Baloo', cursive;
+  font-size: 32px;
+}
+/* line 287, ../sass/index.scss */
+#calculations #calc-auto-main {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: auto;
+  width: 85%;
+}
+/* line 294, ../sass/index.scss */
+#calculations #calc-auto-main span {
+  color: #7ac458;
+  font-weight: bold;
+}

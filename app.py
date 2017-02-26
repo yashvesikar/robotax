@@ -73,10 +73,6 @@ def calculations():
 
 
     return str([robot_tax, robot_tax-total_tax, robots_cost*oldest_robot, total_salary*oldest_robot, oldest_robot])
-    # read the posted values from the UI
-    # _name = request.form['inputName']
-    # _email = request.form['inputEmail']
-    # _password = request.form['inputPassword']
 
 @app.route('/about',methods=['GET'])
 def about():
