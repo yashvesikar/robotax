@@ -24,10 +24,10 @@ _What people might expect in a response from the core devs_
     * Adding more attributes to create more diverse employee and automation classes
     * Adding features to the algorithm used to solve for the 'Robot Tax' to make a more accurate model of different business sectors 
 ## New Feature Requirements
-_Any guidelines for proposing the feature_
+New features must demonstrate a clear advantage and contribute the accuracy of our models while still maintaing user simplicity
 
 ## Style Guide / Coding conventions 
-
+We adhere to the Google coding standard.
 ## Code of Conduct
 This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code.
