@@ -43,4 +43,5 @@ This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDU
 By participating, you are expected to uphold this code.
 
 ## Where can I ask for help?
+Stack overflow is a good resource...
 
