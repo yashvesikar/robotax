@@ -1,19 +1,19 @@
 class Automation(object):
     def __init__(self, productivity, cost,numberOfAutomations, lifeSpan):
         # self.annualHours = annualHours
-        self.productivity = productivity
-        self.cost = cost
-        self.lifeSpan = lifeSpan
-        self.numberOfAutomations = int(numberOfAutomations)
+        self.productivity = float(productivity)
+        self.cost = float(cost)
+        self.lifeSpan = float(lifeSpan)
+        self.numberOfAutomations = float(numberOfAutomations)
         # self.failureRate = failureRate
     	# self.annualCost = annualCost
 
     def Production(self):
-        return int(self.productivity)
+        return self.productivity
     def Cost(self):
-        return int(self.cost)
+        return self.cost
     def LifeSpan(self):
-        return int(self.lifeSpan)
+        return self.lifeSpan
 
     def NumberOfAutomations(self):
         return self.numberOfAutomations

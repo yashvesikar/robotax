@@ -13,26 +13,27 @@
 # =======
 import math
 class Employee(object):
-    def __init__(self,tax,wage,productivity,NumberOfEmployees,status):
-        self.tax = tax
-        self.wage = wage
-        self.productivity = productivity
+    def __init__(self,tax,wage,productivity,numberOfEmployees,status):
+        self.tax = float(tax)
+        self.wage = float(wage)
+        self.productivity = float(productivity)
         self.status = status
-        self.NumberOfEmployees = int(NumberOfEmployees)
+        self.numberOfEmployees = int(numberOfEmployees)
+
     def Wage(self):
-        return int(self.wage)
+        return self.wage
 
     def Tax(self):
-        return int(self.tax)
+        return self.tax
 
     def Production(self):
-        return int(self.productivity)
+        return self.productivity
 
     def Status(self):
         return self.status
 
     def NumberOfEmployees(self):
-        return self.NumberOfEmployees
+        return self.numberOfEmployees
 
     # def __str__(self):
     #     return "Employee salary: {} , Employee Productivity: {}".format(self.salary,self.productivity)
