@@ -104,7 +104,6 @@ $("#submit").click(function(e) {
         emp[objValue['name']] = objValue['value'];
       }
     });
-    console.log(emp);
     submitData['newEmployees'].push(emp);
   })
 
@@ -121,7 +120,7 @@ $("#submit").click(function(e) {
 
   $.ajax({
     url: '/calculations',
-    data: submitData,
+    data: JSON.stringify(submitData),
     dataType: 'json',
     type: 'POST',
     success: function(response) {

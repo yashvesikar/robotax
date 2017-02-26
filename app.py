@@ -1,5 +1,6 @@
 from classes.automation import Automation
 from classes.employee import Employee
+import json
 
 from flask import Flask, render_template, request
 app = Flask(__name__)
@@ -32,7 +33,8 @@ def main():
 
 @app.route('/calculations',methods=['POST'])
 def calculations():
-    print(request.form);
+    print(request.form.to_dict().keys()[0])
+
 
     return render_template('index.html')
     # read the posted values from the UI
