@@ -1,0 +1,358 @@
+@import 'partials/colors';
+@import url("https://fonts.googleapis.com/css?family=Baloo|Raleway");
+@import 'partials/tooltip';
+@import 'partials/animations';
+
+input::-webkit-input-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus:-moz-placeholder {
+  opacity: 1;
+}
+
+input::-moz-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus::-moz-placeholder {
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: $jet;
+  opacity: 0.4;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+}
+
+body {
+  background-color: $platinum;
+  margin: 70px auto 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+  background-color: $jet;
+  display: flex;
+  font-family: ubuntu;
+  font-weight: 300;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  ul {
+    align-content: center;
+    display: inherit;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    float: left;
+    line-height: 70px;
+
+    a {
+      color: inherit;
+      padding: 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a::after {
+      opacity: 0;
+      width: 100%;
+    }
+
+    &#home {
+      align-content: center;
+      display: inherit;
+      flex-direction: row;
+      height: 70px;
+      margin: 0 16px 0 17px;
+      overflow: hidden;
+      position: relative;
+      transition: width 1s ease-in-out;
+      width: 56px;
+    }
+
+    &#home:hover {
+      width: 100%;
+    }
+
+    img {
+      height: auto;
+      opacity: 1;
+      margin: auto;
+      width: 50px;
+    }
+  }
+
+  li &#home,
+  li a::after {
+    background-color: transparent;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: opacity 0.1s linear;
+    width: 100%;
+  }
+
+  li &#home:hover,
+  li a:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  li span {
+    color: $bleudefrance;
+    font-family: 'Baloo', cursive;
+    font-size: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: auto auto auto 16px;
+
+    span {
+      color: $platinum;
+      margin: auto;
+    }
+  }
+}
+
+#intro-header {
+  color: $bleudefrance;
+  font-family: 'Baloo', cursive;
+  font-size: 5em;
+  margin-top: 100px;
+
+  span {
+    color: $jet;
+    margin: auto;
+  }
+}
+
+#intro-text {
+  color: $bleudefrance;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 25px auto auto;
+  width: 85%;
+}
+
+#first-step {
+  h3 {
+    color: $jet;
+    font-family: 'Baloo', cursive;
+    font-size: 1.5em;
+    margin: 50px auto auto;
+    text-align: left;
+    width: 85%;
+
+    span {
+      color: $mantis;
+    }
+  }
+}
+
+#employee-add {
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 $box-shadow;
+  margin: 15px auto auto;
+  min-height: 100px;
+  position: relative;
+  width: 85%;
+
+  form {
+    align-content: center;
+    border-bottom: 1px solid $platinum;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    input {
+      border: 0;
+      padding: 5px 0 5px 10px;
+      width: calc(100%/4);
+    }
+
+    input:first-child,
+    input:nth-child(2) {
+      border-right: 1px solid $platinum;
+    }
+
+    input:last-child {
+      border-left: 1px solid $platinum;
+    }
+  }
+}
+
+.add-header {
+  align-content: center;
+  background-color: $jet;
+  border-bottom: 1px solid $platinum;
+  color: $bleudefrance;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  li {
+    font-size: 16px;
+    padding: 8px 0;
+    width: calc(100%/4);
+  }
+
+  li:first-child,
+  li:nth-child(2) {
+    border-right: 1px solid $platinum;
+  }
+
+  li:last-child {
+    border-left: 1px solid $platinum;
+  }
+
+  li a {
+    color: $platinum;
+    font-size: 12px;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.1s linear;
+  }
+
+  li a:hover {
+    opacity: 1;
+  }
+
+  li span {
+    border: 0;
+    color: $platinum;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+  }
+}
+
+#second-step {
+  h3 {
+    color: $jet;
+    display: none;
+    font-family: 'Baloo', cursive;
+    font-size: 1.5em;
+    margin: 50px auto auto;
+    text-align: left;
+    width: 85%;
+
+    span {
+      color: $mantis;
+    }
+  }
+}
+
+#new-emp-add {
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 $box-shadow;
+  display: none;
+  margin: 15px auto auto;
+  min-height: 100px;
+  position: relative;
+  width: 85%;
+
+  #emp-add-header {
+    align-content: center;
+    background-color: $jet;
+    border-bottom: 1px solid $platinum;
+    color: $bleudefrance;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+      font-size: 16px;
+      padding: 8px 0;
+      width: calc(100%/3);
+    }
+
+    li:nth-child(2) {
+      border-left: 1px solid $platinum;
+      border-right: 1px solid $platinum;
+    }
+
+    li a {
+      color: $platinum;
+      font-size: 12px;
+      opacity: 0.7;
+      text-decoration: none;
+      transition: all 0.1s linear;
+    }
+
+    li a:hover {
+      opacity: 1;
+    }
+
+    li span {
+      border: 0;
+      color: $platinum;
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+    }
+  }
+
+  form {
+    align-content: center;
+    border-bottom: 1px solid $platinum;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    input {
+      border: 0;
+      padding: 5px 0 5px 10px;
+      width: calc(100%/3);
+    }
+
+    input:nth-child(2) {
+      border-left: 1px solid $platinum;
+      border-right: 1px solid $platinum;
+    }
+  }
+}

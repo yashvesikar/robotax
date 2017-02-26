@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-<head>
-    <title>Python Flask Bucket List App</title>
- 
- 
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
- 
-    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
- 
- 
-</head>
- 
-<body>
- 
-    <div class="container">
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="#">Home</a>
-                    </li>
-                    <li role="presentation"><a href="#">Sign In</a>
-                    </li>
-                    <li role="presentation"><a href="showSignUp">Sign Up</a>
-                    </li>
-                </ul>
-            </nav>
-            <h3 class="text-muted">Python Flask App</h3>
-        </div>
- 
-        <div class="jumbotron">
-            <h1>Bucket List App</h1>
-            <p class="lead"></p>
-            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Sign up today</a>
-            </p>
-        </div>
- 
-        <div class="row marketing">
-            <div class="col-lg-6">
-                <h4>Bucket List</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
- 
-            <div class="col-lg-6">
-                <h4>Bucket List</h4>
-                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
- 
-                <h4>Bucket List</h4>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-            </div>
-        </div>
- 
-        <footer class="footer">
-            <p>&copy; Company 2015</p>
-        </footer>
- 
-    </div>
-</body>
- 
+
+  <head>
+    <title>RoboTax</title>
+
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/index.css') }}">
+
+  </head>
+
+  <body>
+
+    <nav>
+      <ul>
+        <li id="home"><img class="icon" src="{{ url_for('static', filename='images/logo.svg') }}" alt="RoboTax Logo">
+          <span>Robo<span>Tax</span>
+          </span>
+        </li>
+        <!-- <li>
+          <a href="https://github.com/">Github</a>
+        </li> -->
+      </ul>
+    </nav>
+
+    <h1 id="intro-header">
+      Robo<span>Tax</span>
+    </h1>
+
+    <p id="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit urna, condimentum vel condimentum non, accumsan nec arcu. Nullam sollicitudin eros nisi, et ultricies justo tincidunt ut. Maecenas eget eros vitae nisi commodo
+      convallis. Mauris quis velit vehicula, luctus turpis vitae, dapibus metus.
+    </p>
+
+    <section id="first-step">
+      <h3>
+        <span>1.</span>
+        Replaced Employees
+      </h3>
+
+      <div id="employee-add">
+        <ul class="add-header">
+          <li># of Employees</li>
+          <li>Average Tax
+            <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+          <li>Wage
+            <a class="tooltip-target" href="#wage-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+          <li>Productivity
+            <a class="tooltip-target" href="#prod-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+        </ul>
+        <form>
+          <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Wage" required><input type="text" name="productivity" id="num-emp" class="" placeholder="Productivity" required>
+        </form>
+      </div>
+    </section>
+
+    <section id="second-step">
+      <h3>
+        <span>2.</span>
+        New Hires
+      </h3>
+
+      <div id="new-emp-add">
+        <ul id="emp-add-header">
+          <li># of Employees</li>
+          <li>Average Tax
+            <a class="tooltip-target" href="#tax-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs. Lorem ipsum tat bs. Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+          <li>Wage
+            <a class="tooltip-target" href="#wage-faq">?<span class="tooltip fadein above flat-tooltip dark arrow-bottom">Lorem ipsum tat bs.</span>
+            </a>
+          </li>
+        </ul>
+        <form>
+          <input type="text" name="numberOfEmployees" id="num-emp" class="" placeholder="# Employee" required><input type="text" name="averageTax" id="avg-tax" class="" placeholder="Average Tax" required><input type="text" name="wage" id="wage" class="" placeholder="Wage" required>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{ url_for('static', filename='javascripts/index.js') }}"></script>
+  </body>
+
 </html>

@@ -1,0 +1,227 @@
+$plain-glossy: rgba(0, 0, 0, .1);
+$dark-glossy: rgba(255, 255, 255, .2);
+$ccc: #ccc;
+$four: #444;
+
+.tooltip-target {
+  position: relative;
+
+  &:hover .tooltip {
+    display: inline-block;
+    opacity: 1;
+
+    .fadein {
+      opacity: 1;
+    }
+
+    .drop {
+      margin-top: 0;
+    }
+  }
+}
+
+.tooltip {
+  background-color: $jet;
+  border: 1px solid $ccc;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: justify;
+  text-transform: full-width;
+  width: 200px;
+  z-index: 999;
+
+  .dark {
+    background-color: $jet;
+    border: 0;
+    color: $platinum;
+  }
+}
+// Place tooltip above
+
+.above {
+  bottom: 250%;
+  left: -103px;
+}
+// Place tooltip below
+
+.below {
+  left: 0;
+  top: 100%;
+}
+// Place tooltip to the right
+
+.right {
+  left: 100%;
+  top: 0;
+}
+// Place tooltip to the left
+
+.left {
+  right: 100%;
+  top: 0;
+}
+//tooltips arrows
+
+.arrow-bottom::after,
+.arrow-bottom::before,
+.arrow-left::after,
+.arrow-left::before,
+.arrow-right::after,
+.arrow-right::before,
+.arrow-top::after,
+.arrow-top::before {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+.arrow-bottom::after,
+.arrow-left::after,
+.arrow-right::after,
+.arrow-top::after {
+  border-color: transparent;
+  border-width: 8px;
+}
+
+.arrow-bottom::before,
+.arrow-left::before,
+.arrow-right::before,
+.arrow-top::before {
+  border-color: transparent;
+  border-width: 10px;
+}
+// arrow right
+
+.arrow-right::after,
+.arrow-right::before {
+  left: 100%;
+  top: 50%;
+}
+
+.arrow-right::after {
+  border-left-color: $white;
+  margin-top: -8px;
+}
+
+.arrow-right::before {
+  border-left-color: $ccc;
+  margin-top: -10px;
+}
+
+.dark.arrow-right::after {
+  border-left-color: $four;
+}
+
+.dark.arrow-right::before {
+  border-left-color: transparent;
+}
+// arrow left
+
+.arrow-left::after,
+.arrow-left::before {
+  right: 100%;
+  top: 50%;
+}
+
+.arrow-left::after {
+  border-right-color: $white;
+  margin-top: -8px;
+}
+
+.arrow-left::before {
+  border-right-color: $ccc;
+  margin-top: -10px;
+}
+
+.dark.arrow-left::after {
+  border-right-color: $four;
+}
+
+.dark.arrow-left::before {
+  border-right-color: transparent;
+}
+// arrow bottom
+
+.arrow-bottom::after,
+.arrow-bottom::before {
+  left: 50%;
+  top: 100%;
+}
+
+.arrow-bottom::after {
+  border-top-color: $white;
+  margin-left: -8px;
+}
+
+.arrow-bottom::before {
+  border-top-color: $ccc;
+  margin-left: -10px;
+}
+
+.dark.arrow-bottom::after {
+  border-top-color: $jet;
+}
+
+.dark.arrow-bottom::before {
+  border-top-color: transparent;
+}
+// arrow top
+
+.arrow-top::after,
+.arrow-top::before {
+  bottom: 100%;
+  left: 50%;
+}
+
+.arrow-top::after {
+  border-bottom-color: $white;
+  margin-left: -8px;
+}
+
+.arrow-top::before {
+  border-bottom-color: $ccc;
+  margin-left: -10px;
+}
+
+.dark.arrow-top::after {
+  border-bottom-color: $four;
+}
+
+.dark.arrow-top::before {
+  border-bottom-color: transparent;
+}
+
+img.tooltip-thumb {
+  border: 1px solid $ccc;
+  float: left;
+  margin: 5px;
+  max-height: 64px;
+  max-width: 64px21;
+}
+
+.dark img.tooltip-thumb {
+  border: 1px solid $white;
+}
+
+.flat-tooltip {
+  padding: 5px;
+}
+
+.glossy {
+  box-shadow: inset 0 -1.2em 10px $plain-glossy;
+}
+
+.dark.glossy {
+  box-shadow: inset 0 2em 10px $dark-glossy;
+}
+// Flat rounded tooltip
+
+.flat-rounded-tooltip {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 5px;
+}

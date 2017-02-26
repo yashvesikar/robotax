@@ -1,0 +1,658 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo|Raleway");
+/* line 6, ../sass/partials/_tooltip.scss */
+.tooltip-target {
+  position: relative;
+}
+/* line 9, ../sass/partials/_tooltip.scss */
+.tooltip-target:hover .tooltip {
+  display: inline-block;
+  opacity: 1;
+}
+/* line 13, ../sass/partials/_tooltip.scss */
+.tooltip-target:hover .tooltip .fadein {
+  opacity: 1;
+}
+/* line 17, ../sass/partials/_tooltip.scss */
+.tooltip-target:hover .tooltip .drop {
+  margin-top: 0;
+}
+
+/* line 23, ../sass/partials/_tooltip.scss */
+.tooltip {
+  background-color: #303036;
+  border: 1px solid #ccc;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  text-align: justify;
+  text-transform: full-width;
+  width: 200px;
+  z-index: 999;
+}
+/* line 34, ../sass/partials/_tooltip.scss */
+.tooltip .dark {
+  background-color: #303036;
+  border: 0;
+  color: #e2e2e2;
+}
+
+/* line 42, ../sass/partials/_tooltip.scss */
+.above {
+  bottom: 250%;
+  left: -103px;
+}
+
+/* line 48, ../sass/partials/_tooltip.scss */
+.below {
+  left: 0;
+  top: 100%;
+}
+
+/* line 54, ../sass/partials/_tooltip.scss */
+.right {
+  left: 100%;
+  top: 0;
+}
+
+/* line 60, ../sass/partials/_tooltip.scss */
+.left {
+  right: 100%;
+  top: 0;
+}
+
+/* line 66, ../sass/partials/_tooltip.scss */
+.arrow-bottom::after,
+.arrow-bottom::before,
+.arrow-left::after,
+.arrow-left::before,
+.arrow-right::after,
+.arrow-right::before,
+.arrow-top::after,
+.arrow-top::before {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+/* line 82, ../sass/partials/_tooltip.scss */
+.arrow-bottom::after,
+.arrow-left::after,
+.arrow-right::after,
+.arrow-top::after {
+  border-color: transparent;
+  border-width: 8px;
+}
+
+/* line 90, ../sass/partials/_tooltip.scss */
+.arrow-bottom::before,
+.arrow-left::before,
+.arrow-right::before,
+.arrow-top::before {
+  border-color: transparent;
+  border-width: 10px;
+}
+
+/* line 99, ../sass/partials/_tooltip.scss */
+.arrow-right::after,
+.arrow-right::before {
+  left: 100%;
+  top: 50%;
+}
+
+/* line 105, ../sass/partials/_tooltip.scss */
+.arrow-right::after {
+  border-left-color: #fff;
+  margin-top: -8px;
+}
+
+/* line 110, ../sass/partials/_tooltip.scss */
+.arrow-right::before {
+  border-left-color: #ccc;
+  margin-top: -10px;
+}
+
+/* line 115, ../sass/partials/_tooltip.scss */
+.dark.arrow-right::after {
+  border-left-color: #444;
+}
+
+/* line 119, ../sass/partials/_tooltip.scss */
+.dark.arrow-right::before {
+  border-left-color: transparent;
+}
+
+/* line 124, ../sass/partials/_tooltip.scss */
+.arrow-left::after,
+.arrow-left::before {
+  right: 100%;
+  top: 50%;
+}
+
+/* line 130, ../sass/partials/_tooltip.scss */
+.arrow-left::after {
+  border-right-color: #fff;
+  margin-top: -8px;
+}
+
+/* line 135, ../sass/partials/_tooltip.scss */
+.arrow-left::before {
+  border-right-color: #ccc;
+  margin-top: -10px;
+}
+
+/* line 140, ../sass/partials/_tooltip.scss */
+.dark.arrow-left::after {
+  border-right-color: #444;
+}
+
+/* line 144, ../sass/partials/_tooltip.scss */
+.dark.arrow-left::before {
+  border-right-color: transparent;
+}
+
+/* line 149, ../sass/partials/_tooltip.scss */
+.arrow-bottom::after,
+.arrow-bottom::before {
+  left: 50%;
+  top: 100%;
+}
+
+/* line 155, ../sass/partials/_tooltip.scss */
+.arrow-bottom::after {
+  border-top-color: #fff;
+  margin-left: -8px;
+}
+
+/* line 160, ../sass/partials/_tooltip.scss */
+.arrow-bottom::before {
+  border-top-color: #ccc;
+  margin-left: -10px;
+}
+
+/* line 165, ../sass/partials/_tooltip.scss */
+.dark.arrow-bottom::after {
+  border-top-color: #303036;
+}
+
+/* line 169, ../sass/partials/_tooltip.scss */
+.dark.arrow-bottom::before {
+  border-top-color: transparent;
+}
+
+/* line 174, ../sass/partials/_tooltip.scss */
+.arrow-top::after,
+.arrow-top::before {
+  bottom: 100%;
+  left: 50%;
+}
+
+/* line 180, ../sass/partials/_tooltip.scss */
+.arrow-top::after {
+  border-bottom-color: #fff;
+  margin-left: -8px;
+}
+
+/* line 185, ../sass/partials/_tooltip.scss */
+.arrow-top::before {
+  border-bottom-color: #ccc;
+  margin-left: -10px;
+}
+
+/* line 190, ../sass/partials/_tooltip.scss */
+.dark.arrow-top::after {
+  border-bottom-color: #444;
+}
+
+/* line 194, ../sass/partials/_tooltip.scss */
+.dark.arrow-top::before {
+  border-bottom-color: transparent;
+}
+
+/* line 198, ../sass/partials/_tooltip.scss */
+img.tooltip-thumb {
+  border: 1px solid #ccc;
+  float: left;
+  margin: 5px;
+  max-height: 64px;
+  max-width: 64px21;
+}
+
+/* line 206, ../sass/partials/_tooltip.scss */
+.dark img.tooltip-thumb {
+  border: 1px solid #fff;
+}
+
+/* line 210, ../sass/partials/_tooltip.scss */
+.flat-tooltip {
+  padding: 5px;
+}
+
+/* line 214, ../sass/partials/_tooltip.scss */
+.glossy {
+  box-shadow: inset 0 -1.2em 10px rgba(0, 0, 0, 0.1);
+}
+
+/* line 218, ../sass/partials/_tooltip.scss */
+.dark.glossy {
+  box-shadow: inset 0 2em 10px rgba(255, 255, 255, 0.2);
+}
+
+/* line 223, ../sass/partials/_tooltip.scss */
+.flat-rounded-tooltip {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* line 1, ../sass/partials/_animations.scss */
+.fadein {
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/* line 5, ../sass/partials/_animations.scss */
+.drop {
+  margin-top: -100%;
+  -webkit-transition: margin 0.8s ease;
+  transition: margin 0.8s ease;
+}
+
+/* line 6, ../sass/index.scss */
+input::-webkit-input-placeholder {
+  color: #303036;
+  opacity: 0.4;
+}
+
+/* line 11, ../sass/index.scss */
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+/* line 15, ../sass/index.scss */
+input:-moz-placeholder {
+  color: #303036;
+  opacity: 0.4;
+}
+
+/* line 20, ../sass/index.scss */
+input:focus:-moz-placeholder {
+  opacity: 1;
+}
+
+/* line 24, ../sass/index.scss */
+input::-moz-placeholder {
+  color: #303036;
+  opacity: 0.4;
+}
+
+/* line 29, ../sass/index.scss */
+input:focus::-moz-placeholder {
+  opacity: 1;
+}
+
+/* line 33, ../sass/index.scss */
+input:-ms-input-placeholder {
+  color: #303036;
+  opacity: 0.4;
+}
+
+/* line 38, ../sass/index.scss */
+input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+/* line 42, ../sass/index.scss */
+button,
+input,
+textarea {
+  outline: none;
+}
+
+/* line 48, ../sass/index.scss */
+body {
+  background-color: #e2e2e2;
+  margin: 70px auto 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 55, ../sass/index.scss */
+nav {
+  background-color: #303036;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: ubuntu;
+  font-weight: 300;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* line 66, ../sass/index.scss */
+nav ul {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: inherit;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 74, ../sass/index.scss */
+nav li {
+  float: left;
+  line-height: 70px;
+}
+/* line 78, ../sass/index.scss */
+nav li a {
+  color: inherit;
+  padding: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 86, ../sass/index.scss */
+nav li a::after {
+  opacity: 0;
+  width: 100%;
+}
+/* line 91, ../sass/index.scss */
+nav li#home {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 70px;
+  margin: 0 16px 0 17px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  width: 56px;
+}
+/* line 103, ../sass/index.scss */
+nav li#home:hover {
+  width: 100%;
+}
+/* line 107, ../sass/index.scss */
+nav li img {
+  height: auto;
+  opacity: 1;
+  margin: auto;
+  width: 50px;
+}
+/* line 115, ../sass/index.scss */
+li nav#home,
+nav li a::after {
+  background-color: transparent;
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  width: 100%;
+}
+/* line 129, ../sass/index.scss */
+li nav#home:hover::after,
+nav li a:hover::after {
+  opacity: 1;
+}
+/* line 134, ../sass/index.scss */
+nav li span {
+  color: #3498db;
+  font-family: 'Baloo', cursive;
+  font-size: 28px;
+  height: 28px;
+  line-height: 28px;
+  margin: auto auto auto 16px;
+}
+/* line 142, ../sass/index.scss */
+nav li span span {
+  color: #e2e2e2;
+  margin: auto;
+}
+
+/* line 149, ../sass/index.scss */
+#intro-header {
+  color: #3498db;
+  font-family: 'Baloo', cursive;
+  font-size: 5em;
+  margin-top: 100px;
+}
+/* line 155, ../sass/index.scss */
+#intro-header span {
+  color: #303036;
+  margin: auto;
+}
+
+/* line 161, ../sass/index.scss */
+#intro-text {
+  color: #3498db;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 25px auto auto;
+  width: 85%;
+}
+
+/* line 171, ../sass/index.scss */
+#first-step h3 {
+  color: #303036;
+  font-family: 'Baloo', cursive;
+  font-size: 1.5em;
+  margin: 50px auto auto;
+  text-align: left;
+  width: 85%;
+}
+/* line 179, ../sass/index.scss */
+#first-step h3 span {
+  color: #7ac458;
+}
+
+/* line 185, ../sass/index.scss */
+#employee-add {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  margin: 15px auto auto;
+  min-height: 100px;
+  position: relative;
+  width: 85%;
+}
+/* line 194, ../sass/index.scss */
+#employee-add form {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-bottom: 1px solid #e2e2e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 203, ../sass/index.scss */
+#employee-add form input {
+  border: 0;
+  padding: 5px 0 5px 10px;
+  width: calc(100%/4);
+}
+/* line 209, ../sass/index.scss */
+#employee-add form input:first-child,
+#employee-add form input:nth-child(2) {
+  border-right: 1px solid #e2e2e2;
+}
+/* line 214, ../sass/index.scss */
+#employee-add form input:last-child {
+  border-left: 1px solid #e2e2e2;
+}
+
+/* line 220, ../sass/index.scss */
+.add-header {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #303036;
+  border-bottom: 1px solid #e2e2e2;
+  color: #3498db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 233, ../sass/index.scss */
+.add-header li {
+  font-size: 16px;
+  padding: 8px 0;
+  width: calc(100%/4);
+}
+/* line 239, ../sass/index.scss */
+.add-header li:first-child,
+.add-header li:nth-child(2) {
+  border-right: 1px solid #e2e2e2;
+}
+/* line 244, ../sass/index.scss */
+.add-header li:last-child {
+  border-left: 1px solid #e2e2e2;
+}
+/* line 248, ../sass/index.scss */
+.add-header li a {
+  color: #e2e2e2;
+  font-size: 12px;
+  opacity: 0.7;
+  text-decoration: none;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 256, ../sass/index.scss */
+.add-header li a:hover {
+  opacity: 1;
+}
+/* line 260, ../sass/index.scss */
+.add-header li span {
+  border: 0;
+  color: #e2e2e2;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
+
+/* line 269, ../sass/index.scss */
+#second-step h3 {
+  color: #303036;
+  display: none;
+  font-family: 'Baloo', cursive;
+  font-size: 1.5em;
+  margin: 50px auto auto;
+  text-align: left;
+  width: 85%;
+}
+/* line 278, ../sass/index.scss */
+#second-step h3 span {
+  color: #7ac458;
+}
+
+/* line 284, ../sass/index.scss */
+#new-emp-add {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  display: none;
+  margin: 15px auto auto;
+  min-height: 100px;
+  position: relative;
+  width: 85%;
+}
+/* line 294, ../sass/index.scss */
+#new-emp-add #emp-add-header {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #303036;
+  border-bottom: 1px solid #e2e2e2;
+  color: #3498db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 307, ../sass/index.scss */
+#new-emp-add #emp-add-header li {
+  font-size: 16px;
+  padding: 8px 0;
+  width: calc(100%/3);
+}
+/* line 313, ../sass/index.scss */
+#new-emp-add #emp-add-header li:nth-child(2) {
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+}
+/* line 318, ../sass/index.scss */
+#new-emp-add #emp-add-header li a {
+  color: #e2e2e2;
+  font-size: 12px;
+  opacity: 0.7;
+  text-decoration: none;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/* line 326, ../sass/index.scss */
+#new-emp-add #emp-add-header li a:hover {
+  opacity: 1;
+}
+/* line 330, ../sass/index.scss */
+#new-emp-add #emp-add-header li span {
+  border: 0;
+  color: #e2e2e2;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+}
+/* line 338, ../sass/index.scss */
+#new-emp-add form {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-bottom: 1px solid #e2e2e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 347, ../sass/index.scss */
+#new-emp-add form input {
+  border: 0;
+  padding: 5px 0 5px 10px;
+  width: calc(100%/3);
+}
+/* line 353, ../sass/index.scss */
+#new-emp-add form input:nth-child(2) {
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+}
