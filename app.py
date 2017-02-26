@@ -7,27 +7,39 @@ app = Flask(__name__)
 @app.route("/")
 def main():
 
-    tax_rate = 0.1
+    TAX_RATE = 0.1
+    
+    # 0 - number
+    # 1 - tax rate
+    # 2 - wage
+    # 3 - productivity
+    
+    _old_employees = []
+    _new_employees = []
+    _new_automations = []
+        
+    
+    # Fired Employee data
+    #old_salary = sum(employee[0] * employee[2] for employee in _old_employees)
+    #old_salary_tax = get_taxes(location, _old_employees)
+    old_tax = sum(employee[0] * employee[1] for employee in _old_employees)
+    old_production = sum(employee[0] * employee[3] for employee in _old_employees)
 
-    #Employee data
-    total_salary = sum(emp.Salary() for emp in array_of_employees if emp.Status() == False)
-    total_production = sum(emp.Production() for emp in array_of_employees if emp.Status() == False)
-
-    #Left hand side of equation, employee side
-    lhs = (total_salary * tax_rate) / total_production
-
-    #Robot data
-    robots_added = len(array_of_automations)
-    robots_production = sum(automation.Production() for automation in array_of_automations)
-    #Technician data/new employee data
-    technicians_tax = sum(emp.Salary() for emp in array_of_employees if emp.Status() == True)* tax_rate
-
-
-    robot_tax = (lhs*robots_production) - technicians_tax
+    # New Hire data
+    #tech_salary = sum(employee[0] * employee[2] for employee in _new_employees)
+    #tech_salary_tax = get_taxes(location, _new_employees)
+    tech_tax = sum(employee[0] * employee[1] for employee in _new_employees)
+    
+    # Robot Production
+    new_production = sum(robot[0] * robot[3] for robot in _new_automations)
+    
+    # Production ratio
+    prod_ratio = new_production / old_production
+    
+    robot_tax = old_production * prod_ratio - technicians_tax
 
     print("Robot Tax: ", robot_tax)
-
-    print("Per robot tax: ", robot_tax/robots_added)
+    print("Per robot tax: ", robot_tax / len(_new_automations))
 
     return render_template('index.html')
 
