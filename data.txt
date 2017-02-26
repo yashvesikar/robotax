@@ -1,0 +1,13 @@
+[
+
+[{"name":"numberOfEmployees","value":"1"},
+{"name":"averageTax","value":"600"},
+{"name":"wage","value":"6031"},
+{"name":"productivity","value":"24"}]','
+
+[{"name":"numberOfEmployees","value":"234"},
+{"name":"averageTax","value":"243"},
+{"name":"wage","value":"343"},
+{"name":"productivity","value":"5235"}]
+
+]
