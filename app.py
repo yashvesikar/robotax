@@ -47,9 +47,9 @@ def calculations():
 
 
     #Employee data
-    total_tax = sum(emp.Tax()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == False)
-    total_salary = sum(emp.Wage()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == False)
-    total_production = sum(emp.Production() for emp in array_of_employees if emp.Status() == False)
+    total_tax = sum(emp.Tax()*emp.NumberOfEmployees() for emp in array_of_employees if emp.Status() == False)
+    total_salary = sum(emp.Wage()*emp.NumberOfEmployees() for emp in array_of_employees if emp.Status() == False)
+    total_production = sum(emp.Production()*emp.NumberOfEmployees() for emp in array_of_employees if emp.Status() == False)
 
     #Left hand side of equation, employee side
     lhs = (total_tax) / total_production
@@ -58,8 +58,8 @@ def calculations():
     robots_added = len(array_of_automations) #This is incorrect
     robots_production = sum(automation.Production()*automation.NumberOfAutomations() for automation in array_of_automations)
     #Technician data/new employee data
-    technicians_tax = sum(emp.Tax()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == True)
-    technicians_salary = sum(emp.Wage()*emp.NumberOfEmployees for emp in array_of_employees if emp.Status() == True)
+    technicians_tax = sum(emp.Tax()*emp.NumberOfEmployees() for emp in array_of_employees if emp.Status() == True)
+    technicians_salary = sum(emp.Wage()*emp.NumberOfEmployees() for emp in array_of_employees if emp.Status() == True)
 
     robot_tax = (lhs*robots_production) - technicians_tax
 
@@ -71,8 +71,8 @@ def calculations():
     robots_cost += robot_tax
     robots_cost += technicians_tax + technicians_salary
 
+    return str([robot_tax, robot_tax+technicians_tax-total_tax, robots_cost*oldest_robot, total_salary*oldest_robot, oldest_robot])
 
-    return str([robot_tax, robot_tax-total_tax, robots_cost*oldest_robot, total_salary*oldest_robot, oldest_robot])
 
 @app.route('/about',methods=['GET'])
 def about():
