@@ -1,14 +1,15 @@
 # RoboTax
 
 
-#Contibuting to [PROJECT]
+#Contibuting to RoboTax
 
-## Welcome contributors to the project: 
+## Welcome!
+We are looking forward to people exploring the field of this application, we hope it is able to evolve into a modular piece of software that has the ability to analyze multiple sectors. There are many forms of automation in the economy that replaces humans including many softwares tools and robots.  
 
 ## Short Links to Important Resources:
-* docs: handbook / roadmap (you'll learn more about this in the roadmapping session)
-* bugs: issue tracker / bug report tool
-* communcations: forum link, developer list, IRC/email, Slack, etc.
+* bugs: please submit bugs into github issue tracker
+* communcations: email is the best way to reach us as developers, we will get back to you as soon as possible:
+  * yashvesikar@gmail.com , olivvemiller@gmail.com , bogdanpozderca@gmail.com, nate.kurt@gmail.com
 ## Testing
 ## Development environment details
 
@@ -27,7 +28,7 @@ _Any guidelines for proposing the feature_
 ## Style Guide / Coding conventions 
 
 ## Code of Conduct
-
+* Behave
 ## Recognition model
 _How will contributors be recognized?_
 
